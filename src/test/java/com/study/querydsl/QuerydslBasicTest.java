@@ -627,7 +627,7 @@ public class QuerydslBasicTest {
 
     @Test
     public void sqlFunction2() {
-        List<String> result = queryFactory
+        queryFactory
                 .select(member.username)
                 .from(member)
                 .where(member.username.eq(Expressions.stringTemplate("fucntion('lower', {0})", member.username)))
